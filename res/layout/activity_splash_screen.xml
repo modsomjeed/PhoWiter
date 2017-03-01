@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/splash_screen" 
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/but_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Continue" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/but_continue"
+        android:layout_centerHorizontal="true"
+        android:text="@string/status_loading"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <CheckBox
+        android:id="@+id/Camera_CheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:clickable="false"
+        android:text="Camera Found" />
+
+    <CheckBox
+        android:id="@+id/Internet_CheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Camera_CheckBox"
+        android:clickable="false"
+        android:text="Internet Connection" />
+
+    <CheckBox
+        android:id="@+id/GPS_CheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Internet_CheckBox"
+        android:clickable="false"
+        android:text="GPS Enabled" />
+
+</RelativeLayout>

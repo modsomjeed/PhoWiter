@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_facebook"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/btn_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/com_facebook_logo" />
+
+    <ImageView
+        android:id="@+id/btn_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_facebook"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/btn_facebook"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <ImageView
+        android:id="@+id/btn_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_facebook"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/btn_facebook"
+        android:layout_weight="0.25"
+        android:src="@android:drawable/ic_menu_camera" />
+
+</RelativeLayout>

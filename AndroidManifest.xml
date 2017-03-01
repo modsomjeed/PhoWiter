@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="th.ac.pim.et.phowiter"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <!-- PERMISSION TO TAGS IMAGES WITH LOCATION -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--
+    NOT SURE IS IT NEEDED
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- If using camera via intent, not need to request permission. -->
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <!-- NEED CAMERA BUT NOT REQUIRED -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <!--
+         <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    -->
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <!-- SAVE IMAGES OR VIDEOS TO SD CARD -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="th.ac.pim.et.phowiter.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="th.ac.pim.et.phowiter.EditImage"
+            android:label="@string/title_activity_edit_image" >
+        </activity>
+    </application>
+
+</manifest>
